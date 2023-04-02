@@ -86,7 +86,7 @@ void DeleteValue(int record)//删除指定值
 		{	
 			temp1 = temp1->link;
 			Delete(i);
-			continue;
+			continue;//continue删除所有record值，break删除第一个record值
 		}
 		temp1 = temp1->link;
 		i++;
