@@ -80,7 +80,7 @@ void DeleteValue(int record)//删除指定值
 {
 	struct node* temp1 = head;
 	int i = 1;
-	while (temp1->link != NULL)
+	while (temp1->link != NULL)//存在缺陷，无法对最后一个n结点进行检验
 	{
 		if (temp1->data == record)
 		{	
@@ -90,6 +90,10 @@ void DeleteValue(int record)//删除指定值
 		}
 		temp1 = temp1->link;
 		i++;
+	}
+	if (temp1->data == record)//对最后一个结点n进行检验
+	{
+		Delete(i);
 	}
 }
 void menu()
